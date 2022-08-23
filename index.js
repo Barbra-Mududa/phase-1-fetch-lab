@@ -1,6 +1,11 @@
+const link ="https://anapioficeandfire.com/api/books"
+
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
-  
+  const response = fetch(link)
+  .then(res => res.json())
+  .then((data) => renderBooks(data))
+  return response
 }
 
 function renderBooks(books) {
